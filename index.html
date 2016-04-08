@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<meta http-equiv='content-type' content='text/html; charset=UTF-8'/>
+		<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+		<title>Icon</title>
+		<link  href='icon.css' rel='stylesheet' type='text/css'></link>
+		<style>
+			html {
+				font-size:13pt;
+				font-size:2vw;
+			}
+			icon:nth-child(5n) { color:blue; }
+			icon:nth-child(5n+2) { color:red; }
+			icon { border:1px solid pink; }
+		</style>
+		<script>
+			addEventListener('load', function() {
+				var icons = document.querySelectorAll('icon');
+				for (var i=0; i<icons.length; i++) {
+					icons[i].addEventListener('click', function(evt) {
+						alert(evt.currentTarget.getAttribute('type') + ' ' + 
+							evt.currentTarget.getAttribute('name'));
+					}, false);
+				}
+			}, false);
+		</script>
+		<script src='icon.js'            ></script>
+		<script src='lib/x.js'           ></script>
+		<script src='lib/gear.js'        ></script>
+		<script src='lib/triangledown.js'></script>
+		<script src='lib/triangleup.js'  ></script>
+		<script src='lib/speaker.js'     ></script>
+		<script src='lib/pencil.js'      ></script>
+		<script src='lib/menu.js'        ></script>
+		<script src='lib/spinner.js'     ></script>
+		<script src='lib/grid.js'        ></script>
+		<script src='lib/user.js'        ></script>
+	</head>
+	<body>
+		<icon type=char name=x            ></icon>
+		<icon type=char name=menu         ></icon>      
+		<icon type=char name=gear         ></icon>      
+		<icon type=char name=pencil       ></icon> 
+		<icon type=char name=spinner      ></icon>   
+		<icon type=char name=triangledown ></icon>
+		<icon type=char name=triangleright></icon>
+		<icon type=char name=audio        ></icon>     
+		<icon type=char name=handle       ></icon>    
+		<icon type=char name=parallel     ></icon>  
+		<icon type=char name=pencilup     ></icon>  
+		<icon type=char name=globe        ></icon>     
+		<icon type=char name=peace        ></icon>     
+		<icon type=char name=square       ></icon>    
+		<icon type=char name=times        ></icon>
+		<br/>
+		<icon type=draw name=x           ></icon>
+		<icon type=draw name=menu        ></icon>
+		<icon type=draw name=gear        ></icon>
+		<icon type=draw name=pencil      ></icon>
+		<icon type=draw name=spinner     ></icon>
+		<icon type=draw name=triangledown></icon>
+		<icon type=draw name=triangleup  ></icon>
+		<icon type=draw name=speaker     ></icon>
+		<icon type=draw name=grid        ></icon>
+		<icon type=draw name=user        ></icon>
+
+
+		<p>
+		Embed icons using either unicode characters or javascript canvas drawing.
+		<pre>
+	&lt;icon type=char name=pencil&gt;&lt;/icon&gt;
+	&lt;icon type=draw name=user&gt;&lt;/icon&gt;
+		</pre>
+		</p>
+		
+<!--		
+		<p><a href='http://tutorialzine.com/2014/12/you-dont-need-icons-here-are-100-unicode-symbols-that-you-can-use/'>tutorialzine article</a> on Unicode icons</p>
+		<p><a href='http://unicode-table.com/en/search/?q=symbol'>unicode table search on "symbol"</a></p>
+-->
+	</body>
+</html>

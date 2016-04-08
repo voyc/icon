@@ -1,0 +1,31 @@
+icon {
+	vertical-align:middle;
+	display:inline-block;
+	width:1em;
+	height:1em;
+	cursor:pointer;	
+}
+icon[type=draw] {
+}
+icon[type=char] {
+	font-family: arial;
+	font-weight: bold;
+}
+icon[type=char][name]:before {
+	position:relative;
+}
+icon[type=char][name=menu         ]:before {content:'\2630' ; top:-.20em; left:.02em; }
+icon[type=char][name=gear         ]:before {content:'\26ed' ; top:-.20em; }
+icon[type=char][name=handle       ]:before {content:'\28ff' ; top:-.15em; left:.10em; }
+icon[type=char][name=parallel     ]:before {content:'\2225' ; top:-.12em; left:.27em; }
+icon[type=char][name=pencilup     ]:before {content:'\2710' ; top:-.20em; }
+icon[type=char][name=pencil       ]:before {content:'\270e' ; top:-.20em; }
+icon[type=char][name=spinner      ]:before {content:'\21bb' ; top:-.07em; left:.10em; }
+icon[type=char][name=audio        ]:before {content:'\1f3a7'; top:-.20em; }
+icon[type=char][name=globe        ]:before {content:'\1f30d'; top:-.18em; }
+icon[type=char][name=peace        ]:before {content:'\262e' ; top:-.20em; left:.05em; }
+icon[type=char][name=square       ]:before {content:'\25A1' ; top:-.17em; left:.20em; }
+icon[type=char][name=triangleright]:before {content:'\25ba' ; top:-.07em; left:.02em; }
+icon[type=char][name=triangledown ]:before {content:'\25bc' ; top:-.07em; }
+icon[type=char][name=x            ]:before {content:'\2573' ; top:-.30em; }
+icon[type=char][name=times        ]:before {content:'\d7'   ; top:-.06em; left:.18em; }
