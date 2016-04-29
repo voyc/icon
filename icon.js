@@ -1,10 +1,22 @@
-﻿function Icon() {
+/**
+	class Icon
+		singleton
+		@constructor
+		draws icons in HTML elements defined with icon tagname
+		Example: <icon name=menu/>
+**/
+function Icon() {
+	// is singleton
+	if (Icon._instance) return Icon._instance;
+	else Icon._instance = this;
+	
 	this.icons = [];
 }
 
 Icon.prototype = {
-	attachAll: function() {
-		var icons = document.querySelectorAll('icon[type=draw]');
+	attachAll: function(element) {
+		var elem = element || document;
+		var icons = elem.querySelectorAll('icon[type=draw]');
 		var icon;
 		for (var i=0; i<icons.length; i++) {
 			this.icons.push(icons[i]);
@@ -22,8 +34,8 @@ Icon.prototype = {
 		var opt = {};
 		var canvas = icon.firstChild;
 		var style = window.getComputedStyle(icon);
-		opt.w = canvas.width = parseInt(style.width);
-		opt.h = canvas.height = parseInt(style.height);
+		opt.w = canvas.width = parseInt(style.width,10);
+		opt.h = canvas.height = parseInt(style.height,10);
 		opt.ctx = canvas.getContext('2d');
 		opt.color = style.color;
 		var name = icon.getAttribute('name');
@@ -39,11 +51,10 @@ Icon.prototype = {
 }
 
 addEventListener('load', function() {
-	if (typeof(voyc) == 'undefined') voyc = {};
-	voyc.icon = new Icon();
-	voyc.icon.attachAll();
-	voyc.icon.drawAll();
+	var icon = new Icon();
+	icon.attachAll(document);
+	icon.drawAll();
 }, false);
 addEventListener('resize', function() {
-	voyc.icon.drawAll();
+	(new Icon()).drawAll();
 }, false);
