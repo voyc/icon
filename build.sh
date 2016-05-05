@@ -1,7 +1,7 @@
 # build icon
 
 # compile the js files with google closure compiler
-python compilejs.py >min.js
+python compilejs.py $1 >min.js
 
 # compress css file with yui
 java -jar ~/bin/yuicompressor/yuicompressor-2.4.2.jar icon.css -o min.css --charset utf-8

@@ -5,7 +5,9 @@ import httplib, urllib, sys
 # Define the parameters for the POST request and encode them in
 # a URL-safe format.
 
-params = urllib.urlencode([
+#params = urllib.urlencode(
+
+arr = [
 	('code_url', 'http://icon.hagstrand.com/icon.js'),
 	('code_url', 'http://icon.hagstrand.com/lib/x.js'),
 	('code_url', 'http://icon.hagstrand.com/lib/gear.js'),
@@ -21,7 +23,12 @@ params = urllib.urlencode([
 	('language', 'ECMASCRIPT5'),
 	('output_format', 'text'),
 	('output_info', 'compiled_code'),
-])
+]
+
+if (len(sys.argv) > 1):
+	arr.append(('formatting', 'pretty_print'))
+
+params = urllib.urlencode(arr)
 
 # Always use the following value for the Content-type header.
 headers = { "Content-type": "application/x-www-form-urlencoded" }
