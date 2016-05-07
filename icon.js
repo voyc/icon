@@ -1,19 +1,19 @@
 /**
-	class Icon
+	class voyc.Icon
 		singleton
 		@constructor
 		draws icons in HTML elements defined with icon tagname
 		Example: <icon name=menu/>
 **/
-function Icon() {
+voyc.Icon = function() {
 	// is singleton
-	if (Icon._instance) return Icon._instance;
-	else Icon._instance = this;
+	if (voyc.Icon._instance) return voyc.Icon._instance;
+	else voyc.Icon._instance = this;
 	
 	this.icons = [];
 }
 
-Icon.prototype = {
+voyc.Icon.prototype = {
 	attachAll: function(element) {
 		var elem = element || document;
 		var icons = elem.querySelectorAll('icon[type=draw]');
@@ -51,10 +51,10 @@ Icon.prototype = {
 }
 
 addEventListener('load', function() {
-	var icon = new Icon();
+	var icon = new voyc.Icon();
 	icon.attachAll(document);
 	icon.drawAll();
 }, false);
 addEventListener('resize', function() {
-	(new Icon()).drawAll();
+	(new voyc.Icon()).drawAll();
 }, false);
