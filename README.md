@@ -2,4 +2,4 @@
 
 Icons using characters or canvas.
 
-http://icon.hagstrand.com
+http://icon.voyc.com
