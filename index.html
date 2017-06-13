@@ -24,15 +24,39 @@
 		<link rel='stylesheet' href='min.css' type='text/css' />
 <remove>-->
 <?php } ?>
-
 		<style>
 			html {
 				font-size:13pt;
-				font-size:2vw;
+			}
+			icon {
+				font-size:3vw;
 			}
 			icon:nth-child(5n) { color:blue; }
 			icon:nth-child(5n+2) { color:red; }
-			/* icon { border:1px solid pink; } */
+
+			footer {
+				height:2rem;
+				border-top:1px solid black;
+				background-color:rgb(192,192,192);
+			}
+			.group {
+				display:table-cell;
+				width:100%;
+			}
+			.tright {
+				text-align:right;
+			}
+			.ftr {
+				vertical-align:middle;
+				display:inline-block;
+				margin:.3rem;
+			}
+			.voyc {
+				width:4rem;
+			}
+			.git {
+				width:3rem;
+			}
 		</style>
 		<script>
 			addEventListener('load', function() {
@@ -93,10 +117,9 @@
 		<p><a href='http://tutorialzine.com/2014/12/you-dont-need-icons-here-are-100-unicode-symbols-that-you-can-use/'>tutorialzine article</a> on Unicode icons</p>
 		<p><a href='http://unicode-table.com/en/search/?q=symbol'>unicode table search on "symbol"</a></p>
 
-		<hr/>
-		<p><a href='http://voyc.com'><img src='voyclogo.png'/></a>
-		&nbsp;&nbsp;&nbsp;
-		<a href='https://github.com/voyc/icon'>github</a></p>
-
+		<footer>
+			<div class='group'><a href='http://voyc.com/about' class='ftr voyc'><img src='voyc.svg'/></a></div>
+			<div class='group tright'><a href='https://github.com/voyc/icon' class='ftr git'><img src='github.svg'/></a></div>
+		</footer>
 	</body>
 </html>
