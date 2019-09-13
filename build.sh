@@ -4,7 +4,7 @@
 python compilejs.py $1 >min.js
 
 # compress css file with yui
-java -jar ~/bin/yuicompressor/yuicompressor-2.4.2.jar icon.css -o min.css --charset utf-8
+wget --post-data="input=`cat icon.css`" --output-document=min.css https://cssminifier.com/raw
 
 # prepare index.php for production use
 cp index.html index.php
