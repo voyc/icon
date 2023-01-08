@@ -29,6 +29,7 @@ icon[type=char][name=triangleright]:before {content:'\25ba' ; top:-.07em; left:.
 icon[type=char][name=triangledown ]:before {content:'\25bc' ; top:-.07em; }
 icon[type=char][name=x            ]:before {content:'\2573' ; top:-.30em; }
 icon[type=char][name=times        ]:before {content:'\d7'   ; top:-.06em; left:.18em; }
+icon[type=char][name=help         ]:before {content:'\3f'   ; top:-.06em; left:.18em; }
 
 .spin {
 	animation: rotate-left 1.2s linear infinite;
